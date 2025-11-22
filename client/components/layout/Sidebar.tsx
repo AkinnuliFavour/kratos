@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { Home, Compass, Bookmark, Mail, Settings } from "lucide-react";
 
 import {
   Sidebar,
@@ -11,48 +11,47 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
+} from "@/components/ui/sidebar";
 
-import { useSidebar } from "@/components/ui/sidebar"
+import { useSidebar } from "@/components/ui/sidebar";
 
 // Menu items.
 const items = [
   {
     title: "Dashboard",
-    url: "#",
+    url: "/Dashboard/Home",
     icon: Home,
   },
   {
     title: "Explore",
-    url: "#",
-    icon: Inbox,
+    url: "/Explore",
+    icon: Compass,
   },
   {
     title: "Saved",
-    url: "#",
-    icon: Calendar,
+    url: "/Saved",
+    icon: Bookmark,
   },
   {
     title: "Messages",
-    url: "#",
-    icon: Search,
+    url: "/Messages",
+    icon: Mail,
   },
   {
     title: "Settings",
     url: "#",
     icon: Settings,
   },
-]
+];
 
 export function AppSidebar() {
-
-  const {toggleSidebar} = useSidebar();
+  const { toggleSidebar } = useSidebar();
 
   return (
     <Sidebar side="right">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>RoomRadar</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
@@ -70,5 +69,5 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
-  )
+  );
 }

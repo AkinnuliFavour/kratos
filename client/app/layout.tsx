@@ -26,9 +26,14 @@ export default function RootLayout({
     <SidebarProvider>
       <html lang="en">
         <body className={`${poppins.variable} antialiased`}>
-          <AppSidebar />
-          <Navbar />
-          {children}
+          <div className="flex">
+            <AppSidebar />
+
+            <div className="flex flex-col w-full">
+              <Navbar />
+              <main className="mt-4">{children}</main>
+            </div>
+          </div>
         </body>
       </html>
     </SidebarProvider>
