@@ -46,7 +46,7 @@ export default function ListingCard({
   const statusInfo = statusConfig[status];
 
   return (
-    <Card className="flex items-center gap-4 p-4 border-2 border-gray-200 rounded-xl bg-white hover:shadow-md transition-shadow">
+    <Card className="flex flex-col lg:flex-row items-center gap-4 p-4 border-2 border-gray-200 rounded-xl bg-white hover:shadow-md transition-shadow">
       {/* Property Image */}
       <div className="relative w-24 h-24 shrink-0 rounded-lg overflow-hidden bg-gray-200">
         <Image
@@ -59,7 +59,7 @@ export default function ListingCard({
       </div>
 
       {/* Property Details */}
-      <div className="flex-1 min-w-0">
+      <div className="flex-1 min-w-0 text-center lg:text-left">
         <h3 className="text-lg font-semibold text-black truncate">{title}</h3>
         <p className="text-sm text-gray-500 truncate">{address}</p>
         <Badge
@@ -71,7 +71,7 @@ export default function ListingCard({
 
       {/* Price and Actions */}
       <div className="flex items-center gap-6">
-        <div className="text-right">
+        <div className="text-center lg:text-right">
           <p className="text-lg font-semibold text-black">
             ₦{price.toLocaleString()}{" "}
             <span className="text-gray-500">/ year</span>
