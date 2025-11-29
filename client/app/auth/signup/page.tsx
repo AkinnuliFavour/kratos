@@ -1,14 +1,30 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useTransition } from "react";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { signup } from "../actions";
+import { toast } from "sonner";
 
 export default function SignUpPage() {
   const [view, setView] = useState<"selection" | "email">("selection");
+  const [isPending, startTransition] = useTransition();
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+
+    startTransition(async () => {
+      const result = await signup(formData);
+      if (result?.error) {
+        toast.error(result.error);
+      }
+    });
+  };
 
   const GoogleIcon = () => (
     <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
@@ -42,32 +58,52 @@ export default function SignUpPage() {
           </Link>
         </p>
 
-        <form className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="space-y-2">
+            <Label>I am a...</Label>
+            <RadioGroup defaultValue="student" name="role" className="flex gap-4">
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="student" id="student" />
+                <Label htmlFor="student">Student</Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="agent" id="agent" />
+                <Label htmlFor="agent">Agent</Label>
+              </div>
+            </RadioGroup>
+          </div>
+
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
             <Input
               id="email"
+              name="email"
               type="email"
               placeholder="m@example.com"
               className="h-12 border-green-600"
+              required
             />
           </div>
           <div className="space-y-2">
             <Label htmlFor="password">Password</Label>
             <Input
               id="password"
+              name="password"
               type="password"
               className="h-12 border-green-600"
+              required
             />
           </div>
           <Button
             type="submit"
+            disabled={isPending}
             className="w-full h-12 bg-green-600 hover:bg-green-700 text-white text-base mt-4"
           >
-            Sign Up
+            {isPending ? "Signing Up..." : "Sign Up"}
           </Button>
           <Button
             variant="ghost"
+            type="button"
             onClick={() => setView("selection")}
             className="w-full mt-2"
           >
