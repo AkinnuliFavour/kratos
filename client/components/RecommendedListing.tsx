@@ -8,14 +8,14 @@ import {
 } from "@/components/ui/carousel";
 import { useState, useEffect } from "react";
 import { fetchListings } from "@/lib/api/FetchListings";
-import { SavedListing } from "@/lib/types/Listings";
+import { Recommendedlisting } from "@/lib/types/Listings";
 
-export function SavedListings() {
-  const [data, setData] = useState<SavedListing[]>([]);
+const RecommendedListing = () => {
+  const [data, setData] = useState<Recommendedlisting[]>([]);
 
   const getListing = async (): Promise<void> => {
     const listings = await fetchListings();
-    setData(listings.saved_listings ?? []);
+    setData(listings.recommended_listings ?? []);
   };
 
   useEffect(() => {
@@ -48,14 +48,14 @@ export function SavedListings() {
                     />
                   </CardHeader>
                   <CardContent className="flex flex-col">
-                    <h4 className="font-medium leading-normal text-[15px] lg:text-[20px]">
+                    <h4 className="font-medium leading-normal text-[15px]">
                       {item.name}
                     </h4>
-                    <p className="flex items-center text-(--dark-grey) text-[12px] lg:text-sm font-normal leading-normal">
+                    <p className="flex items-center text-(--dark-grey) text-[12px] font-normal leading-normal">
                       <IoLocationOutline />
                       <span>{item.location}</span>
                     </p>
-                    <p className="flex items-center text-(--dark-grey) text-[12px] font-normal leading-normal lg:text-sm">
+                    <p className="flex items-center text-(--dark-grey) text-[12px] font-normal leading-normal">
                       Price: {item.price}
                     </p>
                   </CardContent>
@@ -99,4 +99,6 @@ export function SavedListings() {
       </div>
     </div>
   );
-}
+};
+
+export default RecommendedListing;

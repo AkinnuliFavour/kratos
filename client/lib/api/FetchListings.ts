@@ -1,6 +1,6 @@
 import { Listing } from "../types/Listings";
 
-export async function fetchListings(): Promise<Listing[]> {
+export async function fetchListings(): Promise<Listing> {
   try {
     const res = await fetch("/data/Listings.json", {
       cache: "no-store",
@@ -10,10 +10,13 @@ export async function fetchListings(): Promise<Listing[]> {
       throw new Error("Failed to fetch Listings");
     }
 
-    const data = await res.json();
-    return data;
+    const data: Partial<Listing> = await res.json();
+    return {
+      saved_listings: data.saved_listings ?? [],
+      recommended_listings: data.recommended_listings ?? [],
+    };
   } catch (err: unknown) {
     console.error("Failed to fetch Listings:", err);
-    return [];
+    return { saved_listings: [], recommended_listings: [] };
   }
 }

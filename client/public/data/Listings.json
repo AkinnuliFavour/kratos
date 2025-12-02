@@ -1,58 +1,119 @@
-[
-  {
-    "id": "1",
-    "name": "Royal Crown Castle",
-    "location": "33 Off Ola Crescent",
-    "price": "₦350,000 / year",
-    "image": "/images/listing-img-mobile.svg"
-  },
-  {
-    "id": "2",
-    "name": "Azure Garden Estate",
-    "location": "12B Ikoyi Road",
-    "price": "₦1,200,000 / year",
-    "image": "/images/listing-img-mobile.svg"
-  },
-  {
-    "id": "3",
-    "name": "The Palm Villa",
-    "location": "8 Lekki Phase 1",
-    "price": "₦850,000 / year",
-    "image": "/images/listing-img-mobile.svg"
-  },
-  {
-    "id": "4",
-    "name": "Crescent Heights",
-    "location": "44 Victoria Island",
-    "price": "₦2,400,000 / year",
-    "image": "/images/listing-img-mobile.svg"
-  },
-  {
-    "id": "5",
-    "name": "Sunset Terrace",
-    "location": "91 Ajah-Lekki Expressway",
-    "price": "₦420,000 / year",
-    "image": "/images/listing-img-mobile.svg"
-  },
-  {
-    "id": "6",
-    "name": "Ebony Suites",
-    "location": "2A Gbagada Lane",
-    "price": "₦270,000 / year",
-    "image": "/images/listing-img-mobile.svg"
-  },
-  {
-    "id": "7",
-    "name": "Maple Residence",
-    "location": "15 Old Ikoyi",
-    "price": "₦690,000 / year",
-    "image": "/images/listing-img-mobile.svg"
-  },
-  {
-    "id": "8",
-    "name": "Hilltop Manor",
-    "location": "7 Plateau View",
-    "price": "₦1,050,000 / year",
-    "image": "/images/listing-img-mobile.svg"
-  }
-]
+{
+  "saved_listings": [
+    {
+      "id": "1",
+      "name": "Royal Crown Castle",
+      "location": "33 Off Ola Crescent",
+      "price": "₦350,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "2",
+      "name": "Azure Garden Estate",
+      "location": "12B Ikoyi Road",
+      "price": "₦1,200,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "3",
+      "name": "The Palm Villa",
+      "location": "8 Lekki Phase 1",
+      "price": "₦850,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "4",
+      "name": "Crescent Heights",
+      "location": "44 Victoria Island",
+      "price": "₦2,400,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "5",
+      "name": "Sunset Terrace",
+      "location": "91 Ajah-Lekki Expressway",
+      "price": "₦420,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "6",
+      "name": "Ebony Suites",
+      "location": "2A Gbagada Lane",
+      "price": "₦270,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "7",
+      "name": "Maple Residence",
+      "location": "15 Old Ikoyi",
+      "price": "₦690,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "8",
+      "name": "Hilltop Manor",
+      "location": "7 Plateau View",
+      "price": "₦1,050,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    }
+  ],
+
+  "recommended_listings": [
+    {
+      "id": "1",
+      "name": "Royal Crown Castle",
+      "location": "33 Off Ola Crescent",
+      "price": "₦350,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "2",
+      "name": "Azure Garden Estate",
+      "location": "12B Ikoyi Road",
+      "price": "₦1,200,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "3",
+      "name": "The Palm Villa",
+      "location": "8 Lekki Phase 1",
+      "price": "₦850,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "4",
+      "name": "Crescent Heights",
+      "location": "44 Victoria Island",
+      "price": "₦2,400,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "5",
+      "name": "Sunset Terrace",
+      "location": "91 Ajah-Lekki Expressway",
+      "price": "₦420,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "6",
+      "name": "Ebony Suites",
+      "location": "2A Gbagada Lane",
+      "price": "₦270,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "7",
+      "name": "Maple Residence",
+      "location": "15 Old Ikoyi",
+      "price": "₦690,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "8",
+      "name": "Hilltop Manor",
+      "location": "7 Plateau View",
+      "price": "₦1,050,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    }
+  ]
+}
