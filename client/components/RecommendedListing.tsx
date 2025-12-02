@@ -18,6 +18,10 @@ const RecommendedListing = () => {
     setData(listings.recommended_listings ?? []);
   };
 
+  function truncate(text: string, maxLength: number) {
+    return text.length > maxLength ? text.substring(0, maxLength) + "…" : text;
+  }
+
   useEffect(() => {
     getListing();
   }, []);
@@ -82,14 +86,14 @@ const RecommendedListing = () => {
                 </CardHeader>
                 <CardContent className="flex flex-col">
                   <h4 className="font-medium leading-normal text-[15px] lg:text-[20px]">
-                    {item.name}
+                    {truncate(item.name, 16)}
                   </h4>
                   <p className="flex items-center text-(--dark-grey) text-[12px] lg:text-sm font-normal leading-normal">
                     <IoLocationOutline />
-                    <span>{item.location}</span>
+                    <span>{truncate(item.location, 11)}</span>
                   </p>
                   <p className="flex items-center text-(--dark-grey) text-[12px] font-normal leading-normal lg:text-sm">
-                    Price: {item.price}
+                    Price: {truncate(item.price, 11)}
                   </p>
                 </CardContent>
               </Card>

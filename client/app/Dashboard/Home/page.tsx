@@ -26,7 +26,7 @@ const Homepage = () => {
         <div>
           <div className="w-full space-y-[9px]">
             <h2
-              className={`${inter.variable} flex items-center gap-1 text-(--dark-green)`}
+              className={`${inter.variable} flex items-center gap-4 text-(--dark-green)`}
             >
               <FaHeart className="lg:text-[40px]"/>{" "}
               <span className="font-medium text-xl lg:text-[40px]">Saved Listings</span>
