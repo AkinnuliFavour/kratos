@@ -8,7 +8,13 @@ import { FaCaretRight } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
 import { motion } from "motion/react";
-import { softReveal, slideIn, fadeIn } from "@/components/animation/motion";
+import {
+  softReveal,
+  slideIn,
+  fadeIn,
+  staggerContainer,
+  staggerItem,
+} from "@/components/animation/motion";
 
 const Homepage = () => {
   return (
@@ -37,29 +43,52 @@ const Homepage = () => {
             </p>
           </motion.div>
 
-          <div className="w-full px-[150px] absolute -bottom-13 left-0">
-            <div className=" bg-white w-full hidden lg:flex lg:items-center lg:justify-between py-3 px-6 rounded-sm gap-5">
-              <div className=" flex-1 bg-[#767676B2] px-3.5 py-3 rounded-[5px]">
+          <div className=" w-full px-[150px] absolute -bottom-13 left-0">
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              className=" bg-white w-full hidden lg:flex lg:items-center lg:justify-between py-3 px-6 rounded-sm gap-5"
+            >
+              <motion.div
+                variants={staggerItem}
+                custom={0}
+                className=" flex-1 bg-[#767676B2] px-3.5 py-3 rounded-[5px]"
+              >
                 <p className="flex items-center justify-between font-medium text-[15px] text-white">
                   <span>Location</span>
-                  <IoLocationOutline />
+                  <IoLocationOutline size={24} />
                 </p>
-              </div>
-              <div className="flex-1 bg-[#767676B2] px-3.5 py-3 rounded-[5px]">
+              </motion.div>
+
+              <motion.div
+                variants={staggerItem}
+                custom={1}
+                className="flex-1 bg-[#767676B2] px-3.5 py-3 rounded-[5px]"
+              >
                 <p className="flex items-center justify-between font-medium text-[15px] text-white">
-                  <span>Apartment type</span>
-                  <RxCaretDown />
+                  <span className="truncate">Apartment type</span>
+                  <RxCaretDown size={24} />
                 </p>
-              </div>
-              <div className="flex-2 bg-[#111111CC] px-3.5 py-3 rounded-[5px] flex items-center justify-between">
+              </motion.div>
+
+              <motion.div
+                variants={staggerItem}
+                custom={2}
+                className="flex-2 bg-[#111111CC] px-3.5 py-3 rounded-[5px] flex items-center justify-between"
+              >
                 <input
                   type="text"
                   className="font-medium text-[15px] text-white/60 outline-none border-none w-full pr-4"
                   placeholder="Search"
                 ></input>
-                <CiSearch size={20} className="font-medium text-[15px] text-white/60"/>
-              </div>
-            </div>
+                <CiSearch
+                  size={20}
+                  className="font-medium text-[15px] text-white/60"
+                />
+              </motion.div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
@@ -101,7 +130,7 @@ const Homepage = () => {
         />
       </section>
 
-      <section className="w-full max-w-[1440px] mx-auto mt-[69px] px-4 xl:px-[82px] md:grid grid-cols-[1fr_3fr] gap-6">
+      <section className="w-full max-w-[1440px] mx-auto mt-[69px] lg:mt-[139px] px-4 xl:px-[82px] md:grid grid-cols-[1fr_3fr] gap-6">
         <motion.div
           variants={softReveal}
           initial="hidden"
