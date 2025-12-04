@@ -37,10 +37,8 @@ export default function RootLayout({
             <div className="flex flex-col w-full">
               <Navbar />
               <SearchInput />
-
               <main className="mt-4">{children}</main>
-
-             <Footer />
+             {/* <Footer /> */}
             </div>
           </div>
         </body>
