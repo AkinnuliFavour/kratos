@@ -4,7 +4,10 @@ import Image from "next/image";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { PropertyPreviewData, PropertyPreviewModal } from "@/components/agent/PropertyPreviewModal";
+import {
+  PropertyPreviewData,
+  PropertyPreviewModal,
+} from "@/components/agent/PropertyPreviewModal";
 import { cn } from "@/lib/utils";
 
 export type ListingStatus = "active" | "pending" | "sold";
