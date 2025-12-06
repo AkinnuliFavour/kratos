@@ -10,7 +10,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { PropertyMap } from "@/components/agent/PropertyMap";
 import {
   Bath,
@@ -25,7 +24,6 @@ import {
   Wind,
   Zap,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 export type FeatureIconKey =
   | "generator"
@@ -121,7 +119,7 @@ export function PropertyPreviewModal({
 
         {/* Gallery */}
         <div className="grid grid-cols-1 gap-4 px-6 pt-4 sm:grid-cols-3">
-          <div className="relative col-span-2 h-72 overflow-hidden rounded-xl bg-gradient-to-br from-gray-100 to-gray-200">
+          <div className="relative col-span-2 h-72 overflow-hidden rounded-xl bg-linear-to-br from-gray-100 to-gray-200">
             {heroImage ? (
               <Image
                 src={heroImage.src}

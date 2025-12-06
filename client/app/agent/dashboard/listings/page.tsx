@@ -2,8 +2,11 @@
 
 import ListingCard from "@/components/agent/ListingCard";
 import { PropertyPreviewData } from "@/components/agent/PropertyPreviewModal";
+import { useRouter } from "next/navigation";
 
 export default function ListingsPage() {
+  const router = useRouter();
+
   const basePreview: PropertyPreviewData = {
     title: "The Haven Lodge",
     subtitle: "33 Off Ola Crescent, Akure",
@@ -309,7 +312,10 @@ export default function ListingsPage() {
     <div className="p-8">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-semibold text-[#1A2C1A] mb-8">Listings</h1>
-        <button className="mb-8 px-4 py-2 bg-[#0F8F8F] text-white rounded-md hover:bg-[#14A3A3] transition-colors">
+        <button
+          className="mb-8 px-4 py-2 bg-[#0F8F8F] text-white rounded-md hover:bg-[#14A3A3] transition-colors"
+          onClick={() => router.push("/agent/dashboard/new-listing")}
+        >
           + Add New Listing
         </button>
       </div>
