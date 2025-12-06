@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { PropertyPreviewData, PropertyPreviewModal } from "@/components/agent/PropertyPreviewModal";
 import { cn } from "@/lib/utils";
 
 export type ListingStatus = "active" | "pending" | "sold";
@@ -16,6 +18,7 @@ interface ListingCardProps {
   imageUrl: string;
   onViewStatistics?: () => void;
   onPreview?: () => void;
+  preview: PropertyPreviewData;
 }
 
 const statusConfig = {
@@ -41,7 +44,9 @@ export default function ListingCard({
   imageUrl,
   onViewStatistics,
   onPreview,
+  preview,
 }: ListingCardProps) {
+  const [open, setOpen] = useState(false);
   const statusInfo = statusConfig[status];
 
   return (
@@ -85,13 +90,18 @@ export default function ListingCard({
       {/* Preview Button */}
       <div className="px-6 pb-6">
         <button
-          onClick={onPreview}
+          onClick={() => {
+            onPreview?.();
+            setOpen(true);
+          }}
           className="w-full py-4 bg-white border-2 border-gray-300 rounded-full text-lg font-semibold text-gray-700 hover:bg-gray-50 hover:border-[#10B981] hover:text-[#10B981] transition-all duration-200"
           aria-label="Preview listing"
         >
           Preview
         </button>
       </div>
+
+      <PropertyPreviewModal open={open} onOpenChange={setOpen} data={preview} />
     </Card>
   );
 }
