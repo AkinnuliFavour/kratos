@@ -33,13 +33,13 @@ export default function Navbar() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle cx="16" cy="16" r="16" fill="#10B981" />
+            <circle cx="16" cy="16" r="16" fill="#14A3A3" />
             <circle cx="16" cy="16" r="12" fill="white" />
-            <circle cx="16" cy="16" r="8" fill="#10B981" />
+            <circle cx="16" cy="16" r="8" fill="#0F8F8F" />
             <circle cx="16" cy="16" r="4" fill="white" />
-            <circle cx="16" cy="16" r="2" fill="#10B981" />
+            <circle cx="16" cy="16" r="2" fill="#0F8F8F" />
           </svg>
-          <span className="text-2xl font-bold text-[#10B981]">RoomRadar</span>
+          <span className="text-2xl font-bold text-[#14A3A3]">RoomRadar</span>
         </Link>
 
         {/* Center Section: Navigation Links - Hidden on Mobile */}
@@ -49,7 +49,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-base font-medium transition-colors hover:text-[#10B981]",
+                "text-base font-medium transition-all duration-200 hover:text-[#0F8F8F] hover:-translate-y-0.5 hover:shadow-md px-3 py-2 rounded-md",
                 pathname === link.href
                   ? "text-[#1A2C1A] font-semibold"
                   : "text-[#1A2C1A]"

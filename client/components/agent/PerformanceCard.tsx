@@ -16,11 +16,11 @@ export default function PerformanceCard({
   return (
     <Card className="w-full border-2 border-gray-200 rounded-2xl bg-white">
       <CardContent className="p-6">
-        <div className="space-y-4">
+        <div className="space-y-1">
           <h3 className="text-base font-medium text-gray-500 leading-tight">
             {title}
           </h3>
-          <p className="text-5xl font-bold text-black">{value}</p>
+          <p className="text-3xl font-semibold text-black">{value}</p>
           {subtitle && <p className="text-sm text-gray-500 mt-2">{subtitle}</p>}
         </div>
       </CardContent>

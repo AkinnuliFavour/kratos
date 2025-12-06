@@ -47,7 +47,7 @@ export default function ProfileCard() {
 
         <Button
           variant="outline"
-          className="w-full max-w-[200px] rounded-full border-2 border-black text-black font-medium hover:bg-gray-50"
+          className="w-full max-w-[200px] rounded-lg border-2 border-gray-300 text-black font-medium hover:bg-gray-50"
         >
           View Profile
         </Button>
