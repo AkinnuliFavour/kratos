@@ -134,7 +134,7 @@ export function BasicInfoStep({ formData, updateFormData }: StepProps) {
           {propertyTypes.map((type) => (
             <div
               key={type.value}
-              className="flex items-center space-x-2 border rounded-lg p-3 hover:border-green-600 cursor-pointer"
+              className="flex items-center space-x-2 border rounded-lg p-3 hover:border-[#0F8F8F] cursor-pointer"
             >
               <RadioGroupItem value={type.value} id={type.value} />
               <Label htmlFor={type.value} className="cursor-pointer flex-1">
@@ -186,7 +186,7 @@ export function BasicInfoStep({ formData, updateFormData }: StepProps) {
           variant="outline"
           size="sm"
           onClick={handleUseCurrentLocation}
-          className="w-full bg-green-600 text-white hover:bg-green-700"
+          className="w-full bg-[#0F8F8F] text-white hover:bg-[#0E7E7E] hover:text-white"
         >
           Use My Current Location
         </Button>
@@ -270,7 +270,7 @@ export function UploadImagesStep({ formData, updateFormData }: StepProps) {
 
       <div className="space-y-2">
         <Label>Upload Main Photo:</Label>
-        <label className="border-2 border-dashed rounded-lg p-8 flex flex-col items-center justify-center cursor-pointer hover:border-green-600 transition-colors min-h-[200px]">
+        <label className="border-2 border-dashed rounded-lg p-8 flex flex-col items-center justify-center cursor-pointer hover:border-[#0F8F8F] transition-colors min-h-[200px]">
           <input
             type="file"
             accept="image/*"
@@ -329,7 +329,7 @@ export function UploadImagesStep({ formData, updateFormData }: StepProps) {
               </Button>
             </div>
           ))}
-          <label className="border-2 border-dashed rounded-lg p-4 flex flex-col items-center justify-center cursor-pointer hover:border-green-600 transition-colors h-32">
+          <label className="border-2 border-dashed rounded-lg p-4 flex flex-col items-center justify-center cursor-pointer hover:border-[#0F8F8F] transition-colors h-32">
             <input
               type="file"
               accept="image/*"
@@ -367,7 +367,7 @@ export function UploadImagesStep({ formData, updateFormData }: StepProps) {
               </Button>
             </div>
           ))}
-          <label className="border-2 border-dashed rounded-lg p-4 flex flex-col items-center justify-center cursor-pointer hover:border-green-600 transition-colors h-32">
+          <label className="border-2 border-dashed rounded-lg p-4 flex flex-col items-center justify-center cursor-pointer hover:border-[#0F8F8F] transition-colors h-32">
             <input
               type="file"
               accept="video/*"
@@ -573,7 +573,7 @@ export function PublishConfirmationStep() {
   return (
     <div className="flex flex-col items-center justify-center space-y-6 py-12">
       <div className="w-64 h-64 relative">
-        <Home className="w-full h-full text-green-600" />
+        <Home className="w-full h-full text-[#0F8F8F]" />
       </div>
       <h2 className="text-2xl font-semibold text-[#1A2C1A] text-center">
         Do you Want to

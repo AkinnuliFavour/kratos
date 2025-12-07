@@ -183,7 +183,7 @@ export default function NewListingPage() {
             type="button"
             onClick={handlePublish}
             size="lg"
-            className="bg-green-600 hover:bg-green-700"
+            className="bg-[#0F8F8F] hover:bg-[#0E7E7E]"
           >
             <Check className="h-4 w-4 mr-2" />
             Publish Listing
@@ -216,7 +216,7 @@ export default function NewListingPage() {
               : handleNext
           }
           size="lg"
-          className="bg-green-600 hover:bg-green-700 ml-auto"
+          className="bg-[#0F8F8F] hover:bg-[#0E7E7E] ml-auto"
         >
           {currentStep === 4 ? "Publish" : "Next"}
           <ArrowRight className="h-4 w-4 ml-2" />
