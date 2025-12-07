@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "leaflet/dist/leaflet.css";
@@ -77,6 +79,13 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --primary-green: #00ff11;
+
+  --dark-green: #2A9821;
+  --dark-grey: #5C5C5C;
+  --gold-yellow: #FFC403;
+  --light-green: #0F1;
 }
 
 .dark {
@@ -121,3 +130,6 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+

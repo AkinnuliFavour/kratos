@@ -1,0 +1,185 @@
+{
+  "saved_listings": [
+    {
+      "id": "1",
+      "name": "Royal Crown Castle",
+      "location": "33 Off Ola Crescent",
+      "price": "₦350,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "2",
+      "name": "Azure Garden Estate",
+      "location": "12B Ikoyi Road",
+      "price": "₦1,200,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "3",
+      "name": "The Palm Villa",
+      "location": "8 Lekki Phase 1",
+      "price": "₦850,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "4",
+      "name": "Crescent Heights",
+      "location": "44 Victoria Island",
+      "price": "₦2,400,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "5",
+      "name": "Sunset Terrace",
+      "location": "91 Ajah-Lekki Expressway",
+      "price": "₦420,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "6",
+      "name": "Ebony Suites",
+      "location": "2A Gbagada Lane",
+      "price": "₦270,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "7",
+      "name": "Maple Residence",
+      "location": "15 Old Ikoyi",
+      "price": "₦690,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "8",
+      "name": "Hilltop Manor",
+      "location": "7 Plateau View",
+      "price": "₦1,050,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    }
+  ],
+
+  "recommended_listings": [
+    {
+      "id": "101",
+      "name": "Lakeside Pavilion",
+      "location": "5 Ikate Boulevard",
+      "price": "₦520,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "102",
+      "name": "Verdant Court",
+      "location": "21 Banana Island",
+      "price": "₦1,450,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "103",
+      "name": "Oceanview Studios",
+      "location": "14 Lekki Coastal Road",
+      "price": "₦780,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "104",
+      "name": "Skyline Lofts",
+      "location": "3 Admiralty Way",
+      "price": "₦2,000,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "105",
+      "name": "Gardenia Row",
+      "location": "18 Abule-Egba Street",
+      "price": "₦395,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "106",
+      "name": "Cedar Grove Flats",
+      "location": "9 GRA Extension",
+      "price": "₦310,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "107",
+      "name": "Olive Ridge",
+      "location": "27 Old GRA Road",
+      "price": "₦710,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "108",
+      "name": "Plateau View Residences",
+      "location": "11 Summit Close",
+      "price": "₦1,120,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    }
+  ],
+  "featured_lodges": [
+    {
+      "id": "201",
+      "name": "Harborview Residences",
+      "location": "7 Marina Crescent",
+      "description": "Two-bedroom apartment with bay windows and a modern kitchen.",
+      "price": "₦620,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "202",
+      "name": "Echo Park Suites",
+      "location": "14 Greenwood Lane",
+      "description": "Bright studio with flexible workspace and private balcony.",
+      "price": "₦385,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "203",
+      "name": "Willow Creek Homes",
+      "location": "28 Creekside Drive",
+      "description": "Family-friendly 3-bedroom with garden access and secure parking.",
+      "price": "₦980,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "204",
+      "name": "Sunrise Atelier",
+      "location": "3 Artisan Row",
+      "description": "Light-filled loft with high ceilings and contemporary finishes.",
+      "price": "₦760,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "205",
+      "name": "Cobalt Flats",
+      "location": "55 Bluewater Avenue",
+      "description": "Compact one-bedroom near transit and neighborhood cafes.",
+      "price": "₦450,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "206",
+      "name": "Meadowbrook House",
+      "location": "2 Brookside Terrace",
+      "description": "Comfortable townhouse with private courtyard and study nook.",
+      "price": "₦1,150,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "207",
+      "name": "Orchid Court",
+      "location": "19 Orchid Gate",
+      "description": "Elegant two-bedroom with concierge services and gym access.",
+      "price": "₦1,540,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    },
+    {
+      "id": "208",
+      "name": "Riverside Nook",
+      "location": "11 Riverbend Close",
+      "description": "Cozy retreat with river views and a furnished kitchenette.",
+      "price": "₦330,000 / year",
+      "image": "/images/listing-img-mobile.svg"
+    }
+  ]
+}
