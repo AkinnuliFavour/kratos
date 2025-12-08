@@ -10,7 +10,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Card } from "@/components/ui/card";
-import { PropertyMap } from "@/components/agent/PropertyMap";
+import dynamic from "next/dynamic";
 import {
   Bath,
   BadgeCheck,
@@ -65,6 +65,12 @@ export type PropertyPreviewData = {
   videos: { title: string; thumbnail: string; url: string }[];
 };
 
+// Load the map only on the client to avoid SSR "window is not defined" errors
+const PropertyMap = dynamic(
+  () => import("@/components/agent/PropertyMap").then((m) => m.PropertyMap),
+  { ssr: false }
+);
+
 type PropertyPreviewModalProps = {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -102,6 +108,7 @@ export function PropertyPreviewModal({
     () => data.images.filter((_, idx) => idx !== activeImage).slice(0, 3),
     [activeImage, data.images]
   );
+  const showMap = open;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -182,11 +189,13 @@ export function PropertyPreviewModal({
                   ) : null}
                 </div>
               </div>
-              <PropertyMap
-                lat={data.location.map.lat}
-                lng={data.location.map.lng}
-                label={data.location.map.label ?? data.title}
-              />
+              {showMap ? (
+                <PropertyMap
+                  lat={data.location.map.lat}
+                  lng={data.location.map.lng}
+                  label={data.location.map.label ?? data.title}
+                />
+              ) : null}
             </section>
 
             {/* Contact Card */}
