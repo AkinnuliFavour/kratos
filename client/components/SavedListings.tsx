@@ -15,10 +15,12 @@ import { SavedListing } from "@/lib/types/Listings";
 import { ListingSkeleton } from "@/components/ListingSkeleton";
 import { staggerItem } from "@/components/animation/motion";
 import { FaHeart } from "react-icons/fa6";
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 export function SavedListings() {
   const [data, setData] = useState<SavedListing[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [showAll, setShowAll] = useState<boolean>(false);
 
   const getListing = async (): Promise<void> => {
     setLoading(true);
@@ -113,7 +115,7 @@ export function SavedListings() {
                   <ListingSkeleton />
                 </div>
               ))
-            : data.map((item, index) => (
+            : (showAll ? data : data.slice(0, 7)).map((item, index) => (
                 <motion.div
                   key={item.id}
                   variants={staggerItem}
@@ -155,6 +157,21 @@ export function SavedListings() {
                   </Card>
                 </motion.div>
               ))}
+          {!loading && !showAll && data.length > 7 && (
+            <div className="max-w-[273px]">
+              <div
+                className="cursor-pointer h-full flex items-center justify-center"
+                onClick={() => setShowAll(true)}
+              >
+                <div className="flex flex-col items-center justify-center h-full gap-[31px]">
+                  <div className="w-[89px] h-[89px] bg-(--dark-green) rounded-full flex items-center justify-center">
+                    <FaAngleDoubleRight className="text-[33px]"/>
+                  </div>
+                  <p className="text-[23px] font-normal">View All </p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
